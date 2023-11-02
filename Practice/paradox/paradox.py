@@ -19,7 +19,7 @@ def monty_hall(n):
             if computer_choice == priz_place:
                 choice_1_win += 1
                 win_count += 1
-    return f'Шанс увеличится на {int(choice_2_win / win_count * 100) - int(choice_1_win/ win_count * 100)} процента'
+    return f'Шанс увеличится на {int(choice_2_win / win_count * 100) - int(choice_1_win / win_count * 100)} процента'
 
 
 def couples(dates):
