@@ -19,7 +19,9 @@ def monty_hall(n):
             if computer_choice == priz_place:
                 choice_1_win += 1
                 win_count += 1
-    return f'Шанс увеличится на {int(choice_2_win / win_count * 100) - int(choice_1_win / win_count * 100)} процента'
+    return f'Шанс выиграть, не изменив выбор: {round(choice_1_win / win_count * 100, 2)}\n' \
+           f'Шанс выиграть, изменив выбор: {round(choice_2_win / win_count * 100, 2)}\n' \
+           f'Шанс увеличится на {round(choice_2_win / win_count * 100 - choice_1_win / win_count * 100, 2)}%\n'
 
 
 def couples(dates):
@@ -43,4 +45,5 @@ def birthday(kol_group1, kol_group2, kol_prog):
             count1 += 1
         if c2:
             count2 += 1
-    return f'Вероятность совпадения в группе из {kol_group1} человек: {int(count1 / kol_prog * 100)}%\nВероятность совпадения в группе из {kol_group2} человек: {int(count2 / kol_prog * 100)}%'
+    return f'Вероятность совпадения в группе из {kol_group1} чел.: {round(count1 / kol_prog * 100, 2)}%\n' \
+           f'Вероятность совпадения в группе из {kol_group2} чел.: {round(count2 / kol_prog * 100, 2)}%\n'
