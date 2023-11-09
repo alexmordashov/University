@@ -1,2 +1,2 @@
 from .game import *
-from .viewer import *
+from .gen import *
