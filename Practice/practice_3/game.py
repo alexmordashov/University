@@ -51,25 +51,3 @@ def game():
         if input('Хотите сыграть ещё раз? (да/нет)\n').lower() == 'нет':
             print(f'Ваш рекорд: {gen.get_records(record)}')
             break
-
-
-
-
-
-
-
-        '''if v == "1":
-            record += 1
-        elif v == "2":
-            print("Попробуйте ещё раз. -1 жизнь...")
-        elif v == "3":
-            print("Конец игры!")
-            break
-        else:
-            print("Введеное значение некорректно!")
-
-        if not(word_list):
-            break
-    if record == gen.get_records(record):
-        print("\n\nПоздравляем! Вы установили новый рекорд!")
-    print(f"\n\nВы набрали: {record} очков.\nРекорд: {gen.get_records(record)}")'''
