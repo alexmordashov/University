@@ -1,5 +1,4 @@
-from viewier import show
+from viewer import show
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     show()
