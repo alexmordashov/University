@@ -1,17 +1,11 @@
-from path import *
+from program import *
 
 
 def show():
-    flag = True
-    while flag != False:
+    while True:
         print()
-        print('0. Сменить рабочий каталог')
-        print('1. Преобразовать PDF в Docx')
-        print('2. Преобразовать Docx в PDF')
-        print('3. Произвести сжатие изображений')
-        print('4. Удалить группу файлов')
-        print('5. Выход')
-        print()
+        print('0. Сменить рабочий каталог\n1. Преобразовать PDF в Docx\n'
+              '2. Преобразовать Docx в PDF\n3. Произвести сжатие изображений\n4. Удалить группу файлов\n5. Выход\n')
         choose = input('Выберите действие: ')
         print()
         if choose == '0':
@@ -26,7 +20,7 @@ def show():
         elif choose == '4':
             chosen4()
         elif choose == '5':
-            flag = False
+            break
         else:
             print('Вы ошиблись, введите номер команды ещё раз')
 
