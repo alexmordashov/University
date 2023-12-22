@@ -421,18 +421,22 @@ def office():
                                         fws1 = files_with_str1(delete_str, file_list)
                                         for i in fws1:
                                             os.remove(i)
+                                        break
                                     elif text == "Удалить по началу названия":
                                         fwstart1 = files_with_start1(delete_str, file_list)
                                         for i in fwstart1:
                                             os.remove(i)
+                                        break
                                     elif text == "Удалить по концу названия":
                                         fwe1 = files_with_end1(delete_str, file_list)
                                         for i in fwe1:
                                             os.remove(i)
+                                        break
                                     else:
                                         fwexp1 = files_with_expansion1(delete_str, file_list)
                                         for i in fwexp1:
                                             os.remove(i)
+                                        break
                         window_choice.close()
                         break
             window_delete.close()
