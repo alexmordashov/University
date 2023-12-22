@@ -277,7 +277,7 @@ def gms_window():
     ]'''
     layout = [
         [sg.Text("Выберете способ удаления:")],
-        [sg.Listbox(values=["Удалить по подстроке", "Удалить по началу названия", "Удалить по концу названия", "Удалить по расширению"], enable_events=True, size=(40, 20), key="-DELETE LIST-")],
+        [sg.Spin(values=[x for x in range(1, 96)], readonly=True, key='-SPIN-')],
         [sg.Button('OK', size=(8, 1), key='-OK-')]
 
     ]
