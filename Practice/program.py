@@ -277,7 +277,7 @@ def gms_window():
     ]'''
     layout = [
         [sg.Text("Выберете способ удаления:")],
-        [sg.Spin(values=["Удалить по подстроке", "Удалить по началу названия", "Удалить по концу названия", "Удалить по расширению"],text_color='black', readonly=True, key='-SPIN-')],
+        [sg.Spin(values=["Удалить по подстроке", "Удалить по началу названия", "Удалить по концу названия", "Удалить по расширению"],text_color='black', readonly=True, key='-DELETE LIST-')],
         [sg.Button('OK', size=(8, 1), key='-OK-')]
 
     ]
