@@ -278,6 +278,7 @@ def gms_window():
     layout = [
         [sg.Text("Выберете способ удаления:")],
         [sg.Spin(values=["Удалить по подстроке", "Удалить по началу названия", "Удалить по концу названия", "Удалить по расширению"],text_color='black', readonly=True, key='-DELETE LIST-')],
+        #[sg.Listbox(values=["Удалить по подстроке", "Удалить по началу названия", "Удалить по концу названия", "Удалить по расширению"], enable_events=True, size=(40, 20), key="-DELETE LIST-")],
         [sg.Button('OK', size=(8, 1), key='-OK-')]
 
     ]
@@ -286,11 +287,11 @@ def gms_window():
 
 def choice_window(choice):
     layout = [
-        [sg.Text(choice[0], key='-TEXT-', expand_y=True, expand_x=True)],
+        [sg.Text(choice, key='-TEXT-', expand_y=True, expand_x=True)],
         [sg.InputText(key="-INPUT DELETE-", enable_events=True)],
         [sg.Button('Удалить', size=(8, 1), key="-DELETE CHOICE-")]
     ]
-    choi = sg.Window(choice[0], layout, resizable=True, finalize=True)
+    choi = sg.Window(choice, layout, resizable=True, finalize=True)
     return choi
 
 def office():
