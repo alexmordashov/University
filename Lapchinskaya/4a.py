@@ -29,5 +29,5 @@ print('=====')
 print('Массив B:')
 for i in B:
     print(' '.join(i))
-print()
+print('=====')
 print('Артём Беспечалов 2023-ФГиИБ-ПИ-1б')
