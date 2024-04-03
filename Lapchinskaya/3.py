@@ -7,5 +7,5 @@ for x in [i / 100 for i in range(-1000, 2005, 5)]:
         print(f'x = {"{:.3f}".format(x)} f(x) = {"{:.3f}".format(-1 * x)}')
     elif x >= 0 and x < 6:
         print(f'x = {"{:.3f}".format(x)} f(x) = {"{:.3f}".format(x * 0.5)}')
-print()
+print('=====')
 print('Артём Беспечалов 2023-ФГиИБ-ПИ-1б')
