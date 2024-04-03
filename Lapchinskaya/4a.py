@@ -17,7 +17,7 @@ print(f'Макс. элемент A: {maxel}')
 
 for i in range(len(A)):
     for j in range(len(A)):
-        if i == j:
+        if i == j and int(A[i][j]) != 0:
             arr.append(int(A[i][j]))
             
 print(f'Сумма элементов главной диагонали A: {sum(arr)}')
