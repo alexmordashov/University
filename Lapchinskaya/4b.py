@@ -28,8 +28,8 @@ def work():
     print(f'Макс. элемент A: {maxel_A}')
     for i in range(len(A)):
         for j in range(len(A)):
-            if i == j:
-                diag_A.append(int(A[i][j]))
+            if i == j and int(A[i][j]) != 0:
+                    diag_A.append(int(A[i][j]))
     sum_diag_A = sum_mas(diag_A)
     print(f'Сумма элементов главной диагонали A: {sum_diag_A}')
     print(f'Среднее значение главной диагонали A: {sum_diag_A / len(diag_A)}')
