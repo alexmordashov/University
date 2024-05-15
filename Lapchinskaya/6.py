@@ -1,36 +1,24 @@
-def dec2bin(num, ans=''):
-    if num == 0:
-        return 0
-    while num:
-        ans += str(num % 2)
-        num = num // 2
-    ans = ans[::-1]
-    return ans
+class System:
+    def __init__(self, num, sys):
+        self.num = num
+        self.sys = sys
 
 
-def dec2oct(num, ans=''):
-    if num == 0:
-        return 0
-    while num:
-        ans += str(num % 8)
-        num = num // 8
-    ans = ans[::-1]
-    return ans
+    def int_from_10_to_n(self, ans='', abc = "0123456789ABCDEF"):
+        num1 = int(self.num)
+        if self.num == 0:
+            return 0
+        while self.num > 0:
+            ans += abc[self.num % self.sys]
+            self.num //= self.sys
+        ans = ans[::-1]
+        return ans
 
 
-def dec2hex(num, ans=''):
-    abc = {10: 'A', 11: 'B', 12: 'C', 13: 'D', 14: 'E', 15: 'F'}
-    if num == 0:
-        return 0
-    while num:
-        if num % 16 >= 10 and num % 16 < 16:
-            ans += abc[num % 16]
-        else:
-            ans += str(num % 16)
-        num = num // 16
-    ans = ans[::-1]
-    return ans
-
-
-print(dec2hex(256546))
-
+    def int_from_n_to_10(self, ans=0, abc = "0123456789ABCDEF"):
+        num1 = str(self.num)[::-1]
+        for i in range(len(num1)):
+            ans += ((self.sys ** i) * (abc.index(num1[len(num1) - 1 - i])))
+        return ans
+a = System('1321ABC', 10)
+print(a.from_n_to_10())
