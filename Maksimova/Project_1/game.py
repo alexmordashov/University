@@ -1,7 +1,7 @@
 '''from student import Student
 import os
 
-'''def game():
+def game():
     while True:
         with open("data.txt") as f:
             arr = f.read().splitlines()
@@ -16,7 +16,7 @@ import os
             pass
         else:
             break
-        print(student)'''
+        print(student)
 
 
 def clear_level():
