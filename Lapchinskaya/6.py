@@ -44,8 +44,6 @@ a = System('1488', 16)
 print(a.int_from_10_to_n())
 print(a.)
 '''
-
-
 class Program:
     def int_from_n_to_10(self, num, sys, ans=0, abc="0123456789ABCDEF"):
         num1 = num[::-1]
@@ -71,7 +69,7 @@ class Program:
         else:
             while int_part > 0:
                 new_int = str(int_part % sys) + new_int
-                int_part //= sys
+                int_part //= sys # int_part = int_part // sys
         # Переводим дробную часть числа
         float_part = num - int(num)
         new_float = ''
@@ -96,10 +94,20 @@ class Program:
         print(f"B5A2 в 16-ой = {self.int_from_n_to_10('B', 16)} * 16^3 + {self.int_from_n_to_10('5', 16)} * 16^2 + {self.int_from_n_to_10('A', 16)} * 16 + 2 * 16^0 в 10-ой")
 
     def test3(self):
-        a = self.int_from_n_to_10('1100', 2)  # 1100 из 2-ой в 10-ую
-        b = self.int_from_n_to_10('10', 4)  # 10 из 4-ой в 10-ую
-        c = self.int_from_n_to_10('C', 16)  # С из 16-ой в 10-ую
-        d = self.int_from_n_to_10('100', 2)  # 100 из 2-ой в 10-ую
+        a = ('1100 в 2-ой', self.int_from_n_to_10('1100', 2))  # 1100 из 2-ой в 10-ую
+        b = ('10 в 4-ой', self.int_from_n_to_10('10', 4))  # 10 из 4-ой в 10-ую
+        c = ('C в 16-ой', self.int_from_n_to_10('C', 16))  # С из 16-ой в 10-ую
+        d = ('100 в 2-ой', self.int_from_n_to_10('100', 2))  # 100 из 2-ой в 10-ую
+        abc = []
+        abc.append(a)
+        abc.append(b)
+        abc.append(c)
+        abc.append(d)
+        for i in range(len(abc)):
+            for j in range(i + 1, len(abc)):
+                if abc[i][1] == abc[j][1]:
+                    print(f'{abc[i][0]} = {abc[j][0]}')
+        
 
     def test4(self):
         print(f"F95D3 в 16-ой = {self.int_from_10_to_n(self.int_from_n_to_10('F95D3', 16), 2)} в 2-ой")
@@ -109,8 +117,15 @@ class Program:
 
 
 program = Program()
-# program.test1()
-# program.test2()
-# program.test3()
-# program.test4()
-# program.test5()
+print('Задание 1')
+program.test1()
+print('\nЗадание 2')
+program.test2()
+print('\nЗадание 3')
+program.test3()
+print('\nЗадание 4')
+program.test4()
+print('\nЗадание 5')
+program.test5()
+print('=====')
+print('Артём Беспечалов 2023-ФГиИБ-ПИ-1б')
