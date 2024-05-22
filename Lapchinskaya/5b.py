@@ -3,6 +3,7 @@ import math
 
 def func(x0, xn, hx):
     kol = 0
+    hx = str(hx)
     if '.' in hx:
         kol = len(hx.split('.')[1])
     for x in [i / 10**kol for i in range(int(x0 * 10**kol), int((xn + float(hx)) * 10**kol), int(float(hx) * 10**kol))]:
@@ -14,6 +15,6 @@ def func(x0, xn, hx):
             print(f'x = {"{:.3f}".format(x)} f(x) = {"{:.3f}".format(x * 0.5)}')
 
 
-func(-10, 20, '0.05')
+func(-10, 20, 0.05)
 print('=====')
 print('Артём Беспечалов 2023-ФГиИБ-ПИ-1б')
