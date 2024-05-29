@@ -14,15 +14,18 @@ def maxel(arr):
                 maxel = int(arr[i][j])
     return maxel
 
-def print_mas(arr):
+def print_mas(arr, type):
     for i in arr:
-        print(' '.join(i))
+        if type:
+            print(' '.join(i))
+        else:
+            print(i)
 
 def work():
     diag_A = []
     A = [[str(random.randrange(-20, 21)) for j in range(8)] for i in range(8)]
     print('Массив A:')
-    print_mas(A)
+    print_mas(A, 1)
     maxel_A = maxel(A)
     print('=====')
     print(f'Макс. элемент A: {maxel_A}')
@@ -33,10 +36,10 @@ def work():
     sum_diag_A = sum_mas(diag_A)
     print(f'Сумма элементов главной диагонали A: {sum_diag_A}')
     print(f'Среднее значение главной диагонали A: {sum_diag_A / len(diag_A)}')
-    B = [[str(int(maxel_A) - sum_mas(diag_A) / len(diag_A)) for j in range(8)] for i in range(8)]
+    B = [str(int(maxel_A) - sum_mas(diag_A) / len(diag_A)) for j in range(8)]
     print('=====')
     print('Массив B:')
-    print_mas(B)
+    print_mas(B, 0)
     print('=====')
     print('Артём Беспечалов 2023-ФГиИБ-ПИ-1б')
 
