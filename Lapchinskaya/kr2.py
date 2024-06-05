@@ -32,3 +32,5 @@ if triangle.is_triangle()[1]:
     print(f'Периметр треугольника: {triangle.perimetr()}')
     print(f'Площадь треугольника: {triangle.square()}')
     print(f'Высоты треугольника: {triangle.height()}')
+print('=====')
+print('Артём Беспечалов 2023-ФГиИБ-ПИ-1б')
