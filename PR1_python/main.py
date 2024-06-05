@@ -8,14 +8,12 @@ from PyQt5.QtCore import QSize
 
 
 class MyWin(QtWidgets.QMainWindow):
-    def __init__(self, parent=None):
-        QtWidgets.QWidget.__init__(self, parent)
+    def init(self, parent=None):
+        QtWidgets.QWidget.init(self, parent)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.Integral)  # функция кнопки вычислить
         self.ui.action_2.triggered.connect(self.Info)  # Beшaем на "Об автоpe" функцию Inf
-        self.ui.pushButton_3.clicked.connect(self.Left_Integral)
-        self.ui.pushButton_4.clicked.connect(self.Rigth_Integral)
 
     def Info(self):
         QMessageBox.about(self, "Об авторe",
@@ -41,14 +39,16 @@ class MyWin(QtWidgets.QMainWindow):
             i = 0
             while i < n:
                 x = a + h * (i + 0.5)
-                k = math.e ** (math.tan(x / 3) + 0.1)
+                k = math.e  (math.tan(x / 3) + 0.1)
                 s2 += k * h
                 i += 1
         Otvet = "\n3начение интеграла: " + str("%.3f" % (s2)) + "\nКоличество итераций: " + str(lter)
         self.ui.label_5.setText(Otvet)  # Выводим значение интеграла.
+        self.Left_Integral()
+        self.Rigth_Integral()
 
     def Left_Integral(self):
-        self.ui.label_5.setText(' ')
+        self.ui.label_9.setText(' ')
         s1 = 1
         s2 = 0
         lter = 0  # Счетчик итераций
@@ -67,14 +67,14 @@ class MyWin(QtWidgets.QMainWindow):
             i = 0
             while i < n:
                 x = a + h * i
-                k = math.e ** (math.tan(x / 3) + 0.1)
+                k = math.e  (math.tan(x / 3) + 0.1)
                 s2 += k * h
                 i += 1
         Otvet = "\n3начение интеграла: " + str("%.3f" % (s2)) + "\nКоличество итераций: " + str(lter)
-        self.ui.label_5.setText(Otvet)  # Выводим значение интеграла.
+        self.ui.label_9.setText(Otvet)  # Выводим значение интеграла.
 
     def Rigth_Integral(self):
-        self.ui.label_5.setText(' ')
+        self.ui.label_10.setText(' ')
         s1 = 1
         s2 = 0
         lter = 0  # Счетчик итераций
@@ -97,10 +97,10 @@ class MyWin(QtWidgets.QMainWindow):
                 s2 += k * h
                 i += 1
         Otvet = "\n3начение интеграла: " + str("%.3f" % (s2)) + "\nКоличество итераций: " + str(lter)
-        self.ui.label_5.setText(Otvet)  # Выводим значение интеграла.
+        self.ui.label_10.setText(Otvet)  # Выводим значение интеграла.
 
 
-if __name__ == "__main__":
+if name == "main":
     app = QtWidgets.QApplication(sys.argv)  # ОБЯЗАТЕЛЬНО К НАПИСАНИЮ, ДЛЯ КОРРЕКТНОЙ РАБОТЫ ПРОГРАММЫ!!!
     myapp = MyWin()
     myapp.show()
