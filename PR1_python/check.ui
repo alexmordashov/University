@@ -148,7 +148,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Graphics/msg1786094530-102756.000001.jpg</pixmap>
+     <pixmap>D:\programs\PR1_python\Graphics\graphic.jpg</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
