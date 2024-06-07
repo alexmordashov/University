@@ -18,17 +18,19 @@ class Triangle:
         s = self.square()
         return f'{2 * s / self.a}, {2 * s / self.b}, {2 * s / self.c}'
 
-    def is_triangle(self):
+    def is_triangle_exist(self):
         if self.a + self.b > self.c and self.c + self.b > self.a and self.a + self.c > self.b:
             return ('Треугольник существует', 1)
         else:
             return ('Треугольник не существует', 0)
 
+    is_triangle = property(is_triangle_exist)
+
 
 triangle = Triangle(56, 76, 78)
 print(triangle)
-print(triangle.is_triangle()[0])
-if triangle.is_triangle()[1]:
+print(triangle.is_triangle[0])
+if triangle.is_triangle[1]:
     print(f'Периметр треугольника: {triangle.perimetr()}')
     print(f'Площадь треугольника: {triangle.square()}')
     print(f'Высоты треугольника: {triangle.height()}')
